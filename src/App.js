@@ -1,3 +1,4 @@
+import Navbar from './Navbar';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   
   return (
     <div className="App">
+      <Navbar/>
       <div className="content">
         {/* using dynamic variables */}
         <h1>{title}</h1>
