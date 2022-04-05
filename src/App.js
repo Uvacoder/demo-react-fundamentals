@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import Home from './Home';
 import './App.css';
 
 function App() {
@@ -10,9 +11,10 @@ function App() {
     <div className="App">
       <Navbar/>
       <div className="content">
+        <Home/>
         {/* using dynamic variables */}
-        <h1>{title}</h1>
-        <a href={link}>My personal website</a>
+        {/* <h1>{title}</h1>
+        <a href={link}>My personal website</a> */}
       </div>
     </div>
   );
