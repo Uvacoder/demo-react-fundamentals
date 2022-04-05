@@ -1,8 +1,12 @@
+import {useState} from 'react'
+
 const Home = () => {
-    let name = 'Yudai'
+    // let name = 'Yudai'
+
+    const [name, setName] = useState('Yudai'); 
 
     const handleClick = () => {
-        console.log('Hola mijo')
+        setName('Radagon')
     }
     return ( 
         <div className="home">
