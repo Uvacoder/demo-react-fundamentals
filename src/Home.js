@@ -9,6 +9,11 @@ const Home = () => {
         {title: 'Using styles' , body: 'lorem ipsum...', id: 3},
     ]);
 
+    const handleDelete = (id) => {
+        const newPages = pages.filter(page => page.id !== id);
+        setPages(newPages);
+    }
+
 
     // useState practice
     // const [name, setName] = useState('Yudai'); 
@@ -17,9 +22,10 @@ const Home = () => {
     // }
     return ( 
         <div className="home">
-            <PageList pages={pages}/>
+            <PageList pages={pages} title="All pages" handleDelete={handleDelete}/>
+            {/* <PageList pages={pages.filter((page) => page.title === 'JSX Syntax')} title="JSX"/> */}
 
-            
+
             {/* useState practice
             <p>{name}</p>
             <button onClick={handleClick}>Click me</button> */}
