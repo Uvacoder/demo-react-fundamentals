@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import PageList from './PageList';
 
 const Home = () => {
     
@@ -16,12 +17,9 @@ const Home = () => {
     // }
     return ( 
         <div className="home">
-            {pages.map((page) => (
-                <div className="page-prev" key={page.id}>
-                    <h2>{page.title}</h2>
-                    <p>Written by me boss</p>
-                </div>
-            ))}
+            <PageList pages={pages}/>
+
+            
             {/* useState practice
             <p>{name}</p>
             <button onClick={handleClick}>Click me</button> */}

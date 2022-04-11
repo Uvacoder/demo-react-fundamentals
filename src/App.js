@@ -3,8 +3,8 @@ import Home from './Home';
 
 function App() {
   // dynamic variables
-  const title = "React dynamic variable";
-  const link = "https://yudaicreator.com";
+  // const title = "React dynamic variable";
+  // const link = "https://yudaicreator.com";
   
   return (
     <div className="App">
