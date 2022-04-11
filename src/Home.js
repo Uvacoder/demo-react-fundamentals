@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import PageList from './PageList';
 
 const Home = () => {
@@ -13,6 +13,10 @@ const Home = () => {
         const newPages = pages.filter(page => page.id !== id);
         setPages(newPages);
     }
+
+    useEffect(() => {
+        console.log('use effect ran');
+    }, []);
 
 
     // useState practice
