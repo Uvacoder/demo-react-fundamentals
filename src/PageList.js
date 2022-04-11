@@ -1,4 +1,4 @@
-const PageList = ({pages, title, handleDelete}) => {
+const PageList = ({pages, title}) => {
 
     // invoke props using the props object as a parameter in component function 
     // const pages = props.pages;
@@ -11,7 +11,7 @@ const PageList = ({pages, title, handleDelete}) => {
                 <div className="page-prev" key={page.id}>
                     <h2>{page.title}</h2>
                     <p>Written by me</p>
-                    <button onClick={() => handleDelete(page.id)}>Delete entry</button>
+                    <button>Delete entry</button>
                 </div>
             ))}
             {/* useState practice

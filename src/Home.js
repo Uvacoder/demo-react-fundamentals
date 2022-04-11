@@ -3,19 +3,27 @@ import PageList from './PageList';
 
 const Home = () => {
     
-    const [pages, setPages] = useState([
-        {title: 'React Components' , body: 'lorem ipsum...', id: 1},
-        {title: 'JSX Syntax' , body: 'lorem ipsum...', id: 2},
-        {title: 'Using styles' , body: 'lorem ipsum...', id: 3},
-    ]);
 
-    const handleDelete = (id) => {
-        const newPages = pages.filter(page => page.id !== id);
-        setPages(newPages);
-    }
+    // [
+    //     {title: 'React Components' , body: 'lorem ipsum...', id: 1},
+    //     {title: 'JSX Syntax' , body: 'lorem ipsum...', id: 2},
+    //     {title: 'Using styles' , body: 'lorem ipsum...', id: 3},
+    // ]
+    const [pages, setPages] = useState(null);
+
+    // const handleDelete = (id) => {
+    //     const newPages = pages.filter(page => page.id !== id);
+    //     setPages(newPages);
+    // }
 
     useEffect(() => {
-        console.log('use effect ran');
+        fetch('http://localhost:8000/pages')
+            .then(res => {
+               return res.json();
+            })
+            .then((data) => {
+                setPages(data);
+            })
     }, []);
 
 
@@ -26,7 +34,7 @@ const Home = () => {
     // }
     return ( 
         <div className="home">
-            <PageList pages={pages} title="All pages" handleDelete={handleDelete}/>
+            {pages && <PageList pages={pages} title="All pages" />}
             {/* <PageList pages={pages.filter((page) => page.title === 'JSX Syntax')} title="JSX"/> */}
 
 
