@@ -4,7 +4,7 @@ import useFetch from './useFetch';
 
 const Home = () => {
     
-    const {data: pages, isPending} = useFetch('https://localhost:8000/pages')
+    const {data: pages, isPending} = useFetch('http://localhost:8000/pages')
     // [
     //     {title: 'React Components' , body: 'lorem ipsum...', id: 1},
     //     {title: 'JSX Syntax' , body: 'lorem ipsum...', id: 2},
